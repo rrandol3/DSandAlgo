@@ -10,6 +10,10 @@ namespace BigO
     {
         static void Main(string[] args)
         {
+
         }
+
+        //O(n)
+
     }
 }
