@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HowToSolveCodingProblems", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DS-Intro", "DS-Intro\DS-Intro.csproj", "{04A32D46-2992-413D-9103-0360FC785CC4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DS-Arrays", "DS-Arrays\DS-Arrays.csproj", "{BBEEFFB8-AA89-4AE3-A2A9-B748BF851A81}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{04A32D46-2992-413D-9103-0360FC785CC4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{04A32D46-2992-413D-9103-0360FC785CC4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{04A32D46-2992-413D-9103-0360FC785CC4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BBEEFFB8-AA89-4AE3-A2A9-B748BF851A81}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BBEEFFB8-AA89-4AE3-A2A9-B748BF851A81}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BBEEFFB8-AA89-4AE3-A2A9-B748BF851A81}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BBEEFFB8-AA89-4AE3-A2A9-B748BF851A81}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

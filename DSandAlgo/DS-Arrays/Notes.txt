@@ -1,0 +1,8 @@
+﻿Data Structures: Arrays
+
+stored : contigous memory, in order, smallest footprint
+
+lookup/access = O(1)
+push = O(1), not in C#
+insert = O(n)
+delete = O(n)
