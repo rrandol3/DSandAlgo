@@ -32,3 +32,5 @@
 	Data Structures
 	Function Call
 	Allocations
+
+	**For space complexity we do care about the input

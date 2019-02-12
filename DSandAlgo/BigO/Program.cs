@@ -79,5 +79,29 @@ namespace BigO
         }
         #endregion
 
+        #region Space Complexity
+
+        //Space Complexity O(1)
+        public static void booo(int[] arr)
+        {
+            for (int i = 0; i < arr.Length; i++)
+            {
+                Console.WriteLine(arr[i]);
+            }
+        }
+
+        //Space Complexity of O(n)
+        public static string[] OofNExample(int n)
+        {
+            string[] hiArray = new string[n];
+            for (int i = 0; i < n; i++)
+            {
+                hiArray[i] = "hi";
+            }
+            return hiArray;
+        }
+
+        #endregion
+
     }
 }
