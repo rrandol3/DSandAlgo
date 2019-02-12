@@ -1,0 +1,18 @@
+﻿Data Structures: Introduction
+
+Data Structures = collection of values
+Algorithms = steps/processes that are in place to manipulate Data Structures
+
+Data Structures + Algorithms = Programs
+
+How Computers Store Data
+	RAM - In Memory
+	Hard Drive - Storage
+
+Various operations that can be performed on Data Structures
+	-Access
+	-Insertion
+	-Deletion
+	-Traversal
+	-Searching
+	-Sorting

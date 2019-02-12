@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BigO", "BigO\BigO.csproj", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HowToSolveCodingProblems", "HowToSolveCodingProblems\HowToSolveCodingProblems.csproj", "{11893E47-DFE7-42DD-98FD-CF2905DAE109}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DS-Intro", "DS-Intro\DS-Intro.csproj", "{04A32D46-2992-413D-9103-0360FC785CC4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{11893E47-DFE7-42DD-98FD-CF2905DAE109}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{11893E47-DFE7-42DD-98FD-CF2905DAE109}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{11893E47-DFE7-42DD-98FD-CF2905DAE109}.Release|Any CPU.Build.0 = Release|Any CPU
+		{04A32D46-2992-413D-9103-0360FC785CC4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{04A32D46-2992-413D-9103-0360FC785CC4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{04A32D46-2992-413D-9103-0360FC785CC4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{04A32D46-2992-413D-9103-0360FC785CC4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
