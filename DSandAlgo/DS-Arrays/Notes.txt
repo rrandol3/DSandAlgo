@@ -2,7 +2,21 @@
 
 stored : contigous memory, in order, smallest footprint
 
-lookup/access = O(1)
-push = O(1), not in C#
+lookup/access = O(1), if you know the index
+push/append = *O(1) O(n)*, similiar to ArrayList Add function, adds to back of the ArrayList
 insert = O(n)
 delete = O(n)
+traverse = O(n)
+
+Static vs Dynamic Arrays
+	static = fixed size array
+	dynamic = automatically increases size when space is about to run out
+
+Reference vs Value
+	value = single memory space, allocated on the stack, directly hold the value, primitive types
+		eg. if you assign its value to another variable int a = 1, int b = a, //b = 1 independent of a
+
+	reference = allocated on the heap, holds a reference(address) to object but not the object itself, classes
+		eg. if you assign its value to another variable obj a = 1, obj b = a, b = 2 //a also changes to 2, a = 2
+
+	**C# passes parameters by value (default)**
