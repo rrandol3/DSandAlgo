@@ -11,41 +11,34 @@ namespace DS_Arrays
     {
         static void Main(string[] args)
         {
-            //MyArrayList<int> arr = new MyArrayList<int>();
-            //arr.Insert(1);
-            //arr.Insert(2);
-            //arr.Insert(3);
-            //arr.Insert(4);
-            //Console.WriteLine("After Inserts:");
-            //arr.Display();
-            //arr.Delete(2);
-            //Console.WriteLine("After Delete:");
-            //arr.Display();
-            //Console.WriteLine("Is 4 present:");
-            //Console.WriteLine(arr.IsPresent(5));
-            //Console.WriteLine("Is item at index 5:");
-            //try
-            //{
-            //    Console.WriteLine(arr.Get(5));
-            //}
-            //catch (Exception ex)
-            //{
-
-            //    Console.WriteLine(ex.Message);
-            //}
-            //string str = "Reggie";
-            //Console.WriteLine("String Before:");
-            //Console.WriteLine(str);
-            //Console.WriteLine("String After:");
-            //Console.WriteLine(ReverseString(str));
-            //PrintReverse(str);
-            int[] arr1 = { 0, 3, 4, 31 };
-            int[] arr2 = { 4, 6, 30 };
-            int[] ansArray = MergeSortedArrays(arr1, arr2);
-            for (int i = 0; i < ansArray.Length; i++)
+            MyArrayList<int> arr = new MyArrayList<int>();
+            arr.Insert(1);
+            arr.Insert(2);
+            arr.Insert(3);
+            arr.Insert(4);
+            Console.WriteLine("After Inserts:");
+            arr.Display();
+            arr.Delete(2);
+            Console.WriteLine("After Delete:");
+            arr.Display();
+            Console.WriteLine("Is 4 present:");
+            Console.WriteLine(arr.IsPresent(5));
+            Console.WriteLine("Is item at index 5:");
+            try
             {
-                Console.Write(ansArray[i] + " ");
+                Console.WriteLine(arr.Get(5));
             }
+            catch (Exception ex)
+            {
+
+                Console.WriteLine(ex.Message);
+            }
+            string str = "Reggie";
+            Console.WriteLine("String Before:");
+            Console.WriteLine(str);
+            Console.WriteLine("String After:");
+            Console.WriteLine(ReverseString(str));
+            PrintReverse(str);
         }
 
         //Value Type Example

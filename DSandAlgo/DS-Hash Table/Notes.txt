@@ -1,0 +1,18 @@
+﻿DS: Hash Table
+
+Hash Table - based on key value pair, uses hash function create location address for key value pair
+
+Big O - insert O(1)
+		lookup O(1), maybe be O(n) if there is collision
+		delete O(1)
+		search O(1)
+
+Collisions - when 2 or more items are saved to the same location
+			 ways to resolve:
+				seperate chaining via linked list
+
+Examples in C# - 
+				Dictionary(strongly typed), eg. Dictonary<int, string>, key has to be unique
+				Hashtable(weekly typed), eg. new Hashtable(), key has to be unique
+				Hashset(stongly type), eg. only keeps unique items added to the set, only stores keys
+
