@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DS-Arrays", "DS-Arrays\DS-A
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DS-Hash Table", "DS-Hash Table\DS-Hash Table.csproj", "{1E520D77-E8C0-4998-B3CA-ED0172A75BF5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DS-Linked Lists", "DS-Linked Lists\DS-Linked Lists.csproj", "{870FB292-C81B-48F0-AEA7-36220A56D390}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{1E520D77-E8C0-4998-B3CA-ED0172A75BF5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1E520D77-E8C0-4998-B3CA-ED0172A75BF5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1E520D77-E8C0-4998-B3CA-ED0172A75BF5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{870FB292-C81B-48F0-AEA7-36220A56D390}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{870FB292-C81B-48F0-AEA7-36220A56D390}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{870FB292-C81B-48F0-AEA7-36220A56D390}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{870FB292-C81B-48F0-AEA7-36220A56D390}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
