@@ -86,5 +86,41 @@ namespace DS_Hash_Table
             }
             return -1;
         }
+
+        //using generic Dictionary 
+        public static int FirstOccuringCharUsingDictionary(int[] arr)
+        {
+            Dictionary<int, int> dictionary = new Dictionary<int, int>();
+            for (int i = 0; i < arr.Length; i++)
+            {
+                if (dictionary.ContainsKey(arr[i]))
+                {
+                    return arr[i];
+                }
+                else
+                {
+                    dictionary.Add(arr[i], arr[i]);
+                }
+            }
+            return -1;
+        }
+
+        //using Hashtable
+        public static int FirstOccuringCharUsingHashTable(int[] arr)
+        {
+            Hashtable hashtable = new Hashtable();
+            for (int i = 0; i < arr.Length; i++)
+            {
+                if (hashtable.ContainsKey(arr[i]))
+                {
+                    return arr[i];
+                }
+                else
+                {
+                    hashtable.Add(arr[i], arr[i]);
+                }
+            }
+            return -1;
+        }
     }
 }
