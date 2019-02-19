@@ -1,6 +1,6 @@
 ﻿DS: Hash Table
 
-Hash Table - based on key value pair, uses hash function create location address for key value pair
+Hash Table - based on key value pair, uses hash function create location address for key value pair, no guaranteed order
 
 Big O - insert O(1)
 		lookup O(1), maybe be O(n) if there is collision

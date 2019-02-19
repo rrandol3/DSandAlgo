@@ -16,24 +16,52 @@ namespace DS_Hash_Table
             data = new string[capacity];
         }
 
-        public string Get(int key)
+        public string Get(string key)
         {
-            return string.Empty;
+            var address = Hash(key);
+            if (address != 0)
+            {
+                if (String.IsNullOrWhiteSpace(data[address]))
+                {
+                    return "No value at that location!";
+                }
+                return data[address];
+            }
+            return "Could not find item with that key!";
         }
-        public void Add(string item)
+        public void Add(string key, string value)
         {
-            int index = Hash(size++);
-            data[index] = item;
+            var address = Hash(key);
+            if (string.IsNullOrWhiteSpace(data[address]))
+            {
+                data[address] = value;
+            }
+            data[address] = value;
         }
-        public void Remove(string item)
+        public void Remove(string key)
         {
+            var address = Hash(key);
+            data[address] = "";
+        }
 
+        public void Display()
+        {
+            for (int i = 0; i < data.Length; i++)
+            {
+                if (!string.IsNullOrWhiteSpace(data[i]))
+                {
+                    Console.WriteLine(data[i]);
+                }
+            }
         }
 
-        int Hash(int key)
+        private int Hash(string key)
         {
             int hash = 0;
-
+            for (int i = 0; i < key.Length; i++)
+            {
+                hash = (hash + Convert.ToUInt16(key) * i) % size;
+            }
             return hash;
         }
     }
