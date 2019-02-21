@@ -10,16 +10,15 @@ namespace DS_Linked_Lists
     {
         static void Main(string[] args)
         {
-            Node node = new Node(2, null);
-            Node node1 = new Node(4, null);
-            Node node2 = new Node(6, null);
-            Node node3 = new Node(8, null);
-            LinkedList linkedList = new LinkedList(node);
-            linkedList.Insert(node1);
-            linkedList.Insert(node2);
-            linkedList.Insert(node3);
-            linkedList.Delete(8);
+            LinkedList linkedList = new LinkedList(2);
+            linkedList.InsertAtTail(4);
+            linkedList.InsertAtTail(6);
+            linkedList.InsertAtTail(8);
+            linkedList.InsertAtHead(12);
+            linkedList.InsertAtHead(14);
             linkedList.Display();
+            linkedList.DisplayCount();
+            Console.WriteLine("Is 14 present? " + linkedList.IsPresent(14));
         }
     }
 }

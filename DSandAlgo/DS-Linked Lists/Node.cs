@@ -23,10 +23,9 @@ namespace DS_Linked_Lists
             set { this.next = value; }
         }
 
-        public Node(int value, Node next)
+        public Node(int value)
         {
             this.value = value;
-            this.next = next;
         }
 
 

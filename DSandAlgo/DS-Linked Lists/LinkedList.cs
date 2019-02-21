@@ -9,25 +9,48 @@ namespace DS_Linked_Lists
     public class LinkedList
     {
         Node head;
+        Node tail;
+        int count;
 
-        public LinkedList(Node head)
+        public LinkedList(int value)
         {
-            this.head = head;
+            head = new Node(value);
+            tail = head;
+            count++;
         }
 
-        public void Insert(Node node)
+        public void InsertAtTail(int value)
         {
-            if (head == null)
-            {
-                head = node;
-                return;
-            }
+            Node newNode = new Node(value);
+            tail.Next = newNode;
+            tail = newNode;
+            count++;
+        }
+
+        public void InsertAtHead(int value)
+        {
+            Node newNode = new Node(value);
+            //temp = head
+            //head = newNode
+            //newNode.Next = temp;
             Node temp = head;
-            while (temp.Next != null)
+            head = newNode;
+            newNode.Next = temp;
+            count++;
+        }
+
+        public bool IsPresent(int value)
+        {
+            Node temp = head;
+            while (temp != null)
             {
+                if (temp.Value == value)
+                {
+                    return true;
+                }
                 temp = temp.Next;
             }
-            temp.Next = node;
+            return false;
         }
 
         public void Delete(int valueToDelete)
@@ -51,12 +74,20 @@ namespace DS_Linked_Lists
 
         public void Display()
         {
+            Console.WriteLine("The Linked List consist of:");
             Node temp = head;
             while (temp != null)
             {
-                Console.WriteLine(temp.Value);
+                Console.Write(temp.Value + " ");
                 temp = temp.Next;
             }
+            Console.WriteLine();
         }
+        public void DisplayCount()
+        {
+            Console.WriteLine("The number of items in the Linked List:");
+            Console.WriteLine(count);
+        }
+
     }
 }
