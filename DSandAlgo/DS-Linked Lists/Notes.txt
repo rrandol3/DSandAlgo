@@ -1,0 +1,18 @@
+﻿DS - Linked Lists
+
+Linked Lists = consist of Nodes(value and pointer), value is the value contained, pointer is reference to the next node in the list
+			   eg. apples --> orange --> peach --> plum --> null
+
+What are the advantages of Linked Lists over Arrays and Hash Tables?
+	-No need to constantly increase of size list
+	-Inserting and Deleting from head or tail is O(1) time, swaping of pointers
+	-Inserting and Deleting at specific position doesnt require shifting
+
+Big O
+	Prepend = O(1) add to the head
+	Append = O(1) add to to the tail
+	Lookup = O(n) looking for a item
+	Insert = O(n) at specific spot
+	Delete = O(n) at specific spot
+
+	
