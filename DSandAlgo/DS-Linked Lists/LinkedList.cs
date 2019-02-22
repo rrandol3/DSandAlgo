@@ -70,6 +70,24 @@ namespace DS_Linked_Lists
             }
 
         }
+        //O(n) **Need better understanding**
+        public void Reverse()
+        {
+            //[2 4 6 8 10]
+            //[10 8 6 4 2]
+            Node first = head;
+            tail = head;
+            Node second = first.Next;
+            while (second != null)
+            {
+                Node temp = second.Next;//6
+                second.Next = first;//2
+                first = second;//4
+                second = temp;//6              
+            }
+            head.Next = null;
+            head = first;
+        }
 
         public void Display()
         {

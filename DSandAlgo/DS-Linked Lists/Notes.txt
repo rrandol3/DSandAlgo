@@ -1,7 +1,17 @@
 ﻿DS - Linked Lists
 
-Linked Lists = consist of Nodes(value and pointer), value is the value contained, pointer is reference to the next node in the list
+Singly Linked Lists = consist of Nodes(value and pointer), value is the value contained, pointer is reference to the next node in the list
 			   eg. apples --> orange --> peach --> plum --> null
+			   pros/cons over Doubly Linked List:
+					- Less Memory and Operations
+					- Can't traverse in reverse
+
+Doubly Linked List = same as Singly Linked List but Node has a previous pointer
+			  eg. null <-- apples <--> orange <--> peach <--> plum <--> null
+			  pros/cons over Singly Linked List:
+					- Can traverse forward and reverse
+					- More complex with the additional pointer, More Memory and Operations
+
 
 What are the advantages of Linked Lists over Arrays and Hash Tables?
 	-No need to constantly increase of size list
