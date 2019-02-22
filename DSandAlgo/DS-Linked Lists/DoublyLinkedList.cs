@@ -6,43 +6,43 @@ using System.Threading.Tasks;
 
 namespace DS_Linked_Lists
 {
-    public class LinkedList
+    public class DoublyLinkedList
     {
-        Node head;
-        Node tail;
+        DLLNode head;
+        DLLNode tail;
         int count;
 
-        public LinkedList(int value)
+        public DoublyLinkedList(int value)
         {
-            head = new Node(value);
+            DLLNode newNode = new DLLNode(value);
+            head = newNode;
             tail = head;
-            count++;
-        }
-
-        //O(1)
-        public void InsertAtTail(int value)
-        {
-            Node newNode = new Node(value);
-            tail.Next = newNode;
-            tail = newNode;
             count++;
         }
         //O(1)
         public void InsertAtHead(int value)
         {
-            Node newNode = new Node(value);
-            //temp = head
-            //head = newNode
-            //newNode.Next = temp;
-            Node temp = head;
+            DLLNode newNode = new DLLNode(value);
+            DLLNode oldHead = head;
             head = newNode;
-            newNode.Next = temp;
+            newNode.Next = oldHead;
+            oldHead.Previous = newNode;
+            count++;
+        }
+        //O(1)
+        public void InsertAtTail(int value)
+        {
+            DLLNode newNode = new DLLNode(value);
+            DLLNode oldTail = tail;
+            newNode.Previous = oldTail;
+            oldTail.Next = newNode;
+            tail = newNode;
             count++;
         }
         //O(n)
         public bool IsPresent(int value)
         {
-            Node temp = head;
+            DLLNode temp = head;
             while (temp != null)
             {
                 if (temp.Value == value)
@@ -54,27 +54,28 @@ namespace DS_Linked_Lists
             return false;
         }
         //O(n)
-        public void Delete(int valueToDelete)
+        public void Delete(int value)
         {
-            Node temp = head;
+            DLLNode temp = head;
             while (temp != null)
             {
-                if (temp.Next.Value == valueToDelete)
+                if (temp.Value == value)
                 {
-                    Node nodeToDelete = temp.Next;
-                    temp.Next = nodeToDelete.Next;
+                    temp.Previous.Next = temp.Next;
+                    temp.Next.Previous = temp.Previous;
+                    temp.Previous = null;
+                    temp.Next = null;
                     count--;
                     return;
                 }
                 temp = temp.Next;
             }
-
         }
 
         public void Display()
         {
-            Console.WriteLine("The Linked List consist of:");
-            Node temp = head;
+            Console.WriteLine("The Doubly Linked List consist of:");
+            DLLNode temp = head;
             while (temp != null)
             {
                 Console.Write(temp.Value + " ");
@@ -84,9 +85,8 @@ namespace DS_Linked_Lists
         }
         public void DisplayCount()
         {
-            Console.WriteLine("The number of items in the Linked List:");
+            Console.WriteLine("The number of items in the Doubly Linked List:");
             Console.WriteLine(count);
         }
-
     }
 }
