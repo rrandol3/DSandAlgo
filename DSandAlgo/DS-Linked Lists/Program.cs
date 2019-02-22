@@ -23,14 +23,15 @@ namespace DS_Linked_Lists
 
             Console.WriteLine();
             DoublyLinkedList doublyLinkedList = new DoublyLinkedList(1);
-            doublyLinkedList.InsertAtHead(3);
-            doublyLinkedList.InsertAtHead(5);
-            doublyLinkedList.InsertAtHead(7);
-            doublyLinkedList.InsertAtHead(9);
-            doublyLinkedList.InsertAtTail(11);
-            doublyLinkedList.InsertAtTail(13);
-            doublyLinkedList.Delete(5);
-            doublyLinkedList.Delete(11);
+            doublyLinkedList.InsertAtTail(3);
+            doublyLinkedList.InsertAtTail(5);
+            doublyLinkedList.InsertAtTail(7);
+            doublyLinkedList.InsertAtTail(9);
+            //doublyLinkedList.InsertAtTail(11);
+            //doublyLinkedList.InsertAtTail(13);
+            doublyLinkedList.InsertAtIndex(99, 2);
+            doublyLinkedList.Delete(100);
+            //doublyLinkedList.Delete(11);
             doublyLinkedList.Display();
             doublyLinkedList.DisplayCount();
             Console.WriteLine("Is 13 present? " + doublyLinkedList.IsPresent(13));

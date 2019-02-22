@@ -40,6 +40,55 @@ namespace DS_Linked_Lists
             count++;
         }
         //O(n)
+        public void InsertAtIndex(int value, int index)
+        {
+            if (index > count - 1)
+            {
+                throw new IndexOutOfRangeException();
+            }
+            DLLNode newNode = new DLLNode(value);
+            DLLNode leader = head;
+            int i = 0;
+            while (leader != null)
+            {
+                if (index == i)
+                {
+                    //at the index [1 3 *99* 5 7 9]
+                    //want to insert between follower(3) and leader(5)
+                    //follower = 3, leader 5, newNode = 99
+                    DLLNode follower = leader.Previous;
+                    follower.Next = newNode;
+                    newNode.Previous = follower;
+                    newNode.Next = leader;
+                    leader.Previous = newNode;
+                    count++;
+                }
+                leader = leader.Next;
+                i++;
+            }
+        }
+        //O(n)
+        public void Delete(int value)
+        {
+            DLLNode temp = head;
+            while (temp != null)
+            {
+                if (temp.Value == value)
+                {
+                    DLLNode nodeToDelete = temp;
+                    DLLNode follower = temp.Previous;
+                    DLLNode leader = temp.Next;
+                    follower.Next = leader;
+                    leader.Previous = follower;
+                    nodeToDelete.Previous = null;
+                    nodeToDelete.Next = null;
+                    count--;
+                    return;
+                }
+                temp = temp.Next;
+            }
+        }
+        //O(n)
         public bool IsPresent(int value)
         {
             DLLNode temp = head;
@@ -54,24 +103,6 @@ namespace DS_Linked_Lists
             return false;
         }
         //O(n)
-        public void Delete(int value)
-        {
-            DLLNode temp = head;
-            while (temp != null)
-            {
-                if (temp.Value == value)
-                {
-                    temp.Previous.Next = temp.Next;
-                    temp.Next.Previous = temp.Previous;
-                    temp.Previous = null;
-                    temp.Next = null;
-                    count--;
-                    return;
-                }
-                temp = temp.Next;
-            }
-        }
-
         public void Display()
         {
             Console.WriteLine("The Doubly Linked List consist of:");
