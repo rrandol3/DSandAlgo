@@ -18,6 +18,7 @@ namespace DS_Linked_Lists
             tail = head;
             count++;
         }
+        public LinkedList() { }
 
         //O(1)
         public void InsertAtTail(int value)

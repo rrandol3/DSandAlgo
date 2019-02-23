@@ -12,10 +12,9 @@ namespace DS_Stacks___Queues
         LinkedList data;
         int count;
 
-        public StackLL(int value)
+        public StackLL()
         {
-            data = new LinkedList(value);
-            count++;
+            data = new LinkedList();
         }
         public void Push(int value)
         {
