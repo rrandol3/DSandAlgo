@@ -20,7 +20,7 @@ namespace DS_Linked_Lists
             linkedList.Reverse();
             Console.WriteLine("After Reverse()");
             //linkedList.InsertAtHead(14);
-            //linkedList.Delete(6);
+            //linkedList.Remove(6);
             linkedList.Display();
             linkedList.DisplayCount();
             //Console.WriteLine("Is 14 present? " + linkedList.IsPresent(14));

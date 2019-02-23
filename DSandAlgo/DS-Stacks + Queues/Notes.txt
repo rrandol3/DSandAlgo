@@ -1,0 +1,15 @@
+﻿DS: Stacks & Queues
+
+Stacks = LIFO, Last In First Out, eg. stack of plates or call stack
+		Big O:
+			- lookup = O(n)
+			- pop(remove top of the stack) = O(1)
+			- push(add item to the stack) = O(1)
+			- peek(get top of stack without removing) = O(1)
+
+Queues = FIFO, First In First Out, eg. line at the grocery store, printers... 
+		Big O:
+			- lookup = O(n)
+			- enqueue(add item to back of list) = O(1)
+			- dequeue(remove item from the front of list) = O(1)
+			- peek(get item from front without removing) = O(1)

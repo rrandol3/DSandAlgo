@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27428.2037
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BigO", "BigO\BigO.csproj", "{3F8DF8D8-103D-45FB-869B-F9D048A312F2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Big O", "BigO\Big O.csproj", "{3F8DF8D8-103D-45FB-869B-F9D048A312F2}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HowToSolveCodingProblems", "HowToSolveCodingProblems\HowToSolveCodingProblems.csproj", "{11893E47-DFE7-42DD-98FD-CF2905DAE109}"
 EndProject
@@ -14,6 +14,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DS-Hash Table", "DS-Hash Table\DS-Hash Table.csproj", "{1E520D77-E8C0-4998-B3CA-ED0172A75BF5}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DS-Linked Lists", "DS-Linked Lists\DS-Linked Lists.csproj", "{870FB292-C81B-48F0-AEA7-36220A56D390}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DS-Stacks + Queues", "DS-Stacks + Queues\DS-Stacks + Queues.csproj", "{3F5E66B2-479B-4997-AEBA-B2E1E83FC252}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{870FB292-C81B-48F0-AEA7-36220A56D390}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{870FB292-C81B-48F0-AEA7-36220A56D390}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{870FB292-C81B-48F0-AEA7-36220A56D390}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3F5E66B2-479B-4997-AEBA-B2E1E83FC252}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3F5E66B2-479B-4997-AEBA-B2E1E83FC252}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3F5E66B2-479B-4997-AEBA-B2E1E83FC252}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3F5E66B2-479B-4997-AEBA-B2E1E83FC252}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

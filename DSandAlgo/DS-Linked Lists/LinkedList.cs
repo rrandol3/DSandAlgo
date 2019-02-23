@@ -53,8 +53,17 @@ namespace DS_Linked_Lists
             }
             return false;
         }
+        //O(1)
+        public int RemoveAtHead()
+        {
+            Node oldHead = head;
+            int valueRemoved = oldHead.Value;
+            head = oldHead.Next;
+            oldHead.Next = null;
+            return valueRemoved;
+        }
         //O(n)
-        public void Delete(int valueToDelete)
+        public void Remove(int valueToDelete)
         {
             Node temp = head;
             while (temp != null)
@@ -89,9 +98,13 @@ namespace DS_Linked_Lists
             head = first;
         }
 
+        public int GetHead()
+        {
+            return head.Value;
+        }
         public void Display()
         {
-            Console.WriteLine("The Linked List consist of:");
+            Console.WriteLine("The collection consist of:");
             Node temp = head;
             while (temp != null)
             {
