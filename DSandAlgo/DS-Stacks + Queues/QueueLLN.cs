@@ -7,62 +7,51 @@ using DS_Linked_Lists;
 
 namespace DS_Stacks___Queues
 {
-    //same as StackLL but instead of using the Linked List class we are using jus the Node class
-    public class StackLLN
+    public class QueueLLN
     {
-        Node top;
-        Node bottom;
+        Node front;
+        Node back;
         int count;
 
-        public int Count => count;
-
-        public StackLLN()
-        { }
-
+        public QueueLLN() { }
         //O(1)
-        public void Push(int value)
+        public void Enqueue(int value)
         {
             Node newNode = new Node(value);
             if (count == 0)
             {
-                top = newNode;
-                bottom = top;
+                front = newNode;
+                back = front;
             }
             else
             {
-                Node holder = top;
-                top = newNode;
-                top.Next = holder;
+                Node oldBack = back;
+                oldBack.Next = newNode;
+                back = newNode;
             }
             count++;
         }
-
         //O(1)
-        public int Pop()
+        public int Dequeue()
         {
-            int headValue = top.Value;
-            Node oldhead = top;
-            top = oldhead.Next;
-            oldhead.Next = null;
+            int value = front.Value;
+            Node oldFront = front;
+            front = front.Next;
+            oldFront.Next = null;
             count--;
-            return headValue;
+            return value;
         }
-
         //O(1)
         public int Peek()
         {
-            if (count == 0)
-            {
-                throw new Exception("Stack is empty");
-            }
-            return top.Value;
+            return front.Value;
         }
 
         //O(n)
         public void Display()
         {
             Console.WriteLine("The collection consist of:");
-            Node temp = top;
+            Node temp = front;
             while (temp != null)
             {
                 Console.Write(temp.Value + " ");
@@ -73,7 +62,7 @@ namespace DS_Stacks___Queues
 
         public void DisplayCount()
         {
-            Console.WriteLine("The number of items in the Stack is: " + count);
+            Console.WriteLine("The number of items in the Queue is: " + count);
         }
     }
 }
