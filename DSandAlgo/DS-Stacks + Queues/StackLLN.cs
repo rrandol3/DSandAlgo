@@ -20,16 +20,17 @@ namespace DS_Stacks___Queues
         //O(1)
         public void Push(int value)
         {
+            Node newNode = new Node(value);
             if (count == 0)
             {
-                top = new Node(value);
+                top = newNode;
                 bottom = top;
             }
             else
             {
-                bottom = top;
-                top = new Node(value);
-                top.Next = bottom;
+                Node holder = top;
+                top = newNode;
+                top.Next = holder;
             }
             count++;
         }
