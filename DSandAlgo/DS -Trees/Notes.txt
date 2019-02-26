@@ -1,0 +1,26 @@
+﻿DS-Trees
+
+Binary Tree = type of tree, each node O, 1, 2 Nodes, and each child can only have 1 parent
+
+			Perfect Binary Tree = All nodes are full, each node has 2 children, Divide & Conquer
+				Number of nodes doubles as you move down the tree 
+				Number of nodes at the last level is equal to the sum of all other level(s) nodes + 1
+				Height(h) refers to the total amount of levels in a tree, # of nodes = 2^h - 1
+					log nodes = steps, log 100 = 2 (eg. 10^2 = 100)
+			Big O
+				lookup O(logN)
+				insert O(logN)
+				delete O(logN)
+
+			Full Binary Tree = a node has either 0 or 2 children, but never 1 child
+
+			Binary Search Tree = all child nodes to the right of the root node must be greater than the current node
+								 node can only have up to 2 children
+
+			Unbalanced Binary Search Tree = one side of the tree grows disproportionately to the other side
+											causes O(n) for lookup, inserts and deletes
+Pros & Cons
+	+ Better than O(n)
+	+ Ordered
+	+ Flexible Size
+	- No O(1) operations
