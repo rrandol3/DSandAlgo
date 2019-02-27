@@ -11,7 +11,7 @@ namespace DS__Trees
         BinaryTreeNode root;
 
         public BinarySearchTree() { }
-
+        //O(logN)
         public void Insert(int value)
         {
             BinaryTreeNode newNode = new BinaryTreeNode(value);//creation on newNode
@@ -45,7 +45,55 @@ namespace DS__Trees
                 }
             }
         }
+        //Need to complete 
+        public void Remove(int value)
+        {
+            if (root == null)
+            {
+                return;
+            }
+            BinaryTreeNode current = root;
+            BinaryTreeNode parent = null;
+            while (current != null)
+            {
+                if (value < current.Value)
+                {
+                    parent = current;
+                    current = current.Left;
+                }
+                else if (value > current.Value)
+                {
+                    parent = current;
+                    current = current.Right;
+                }
+                else if (value == current.Value)
+                {
+                    if (current.Right == null)
+                    {
+                        if (parent == null)
+                        {
+                            root = current.Left;
+                        }
+                        else
+                        {
+                            if (current.Value < parent.Value)
+                            {
+                                parent.Left = current.Left;
+                            }
+                            else if (current.Value > parent.Value)
+                            {
+                                parent.Right = current.Left;
+                            }
+                        }
+                    }
+                }
+                else if (true)
+                {
 
+                }
+            }
+        }
+        //O(logN)
         public bool IsPresent(int value)
         {
             if (root == null)
@@ -70,25 +118,25 @@ namespace DS__Trees
             }
             return false;//else return false
         }
-
+        //O(n)
         public void DisplayInorder()
         {
             Console.WriteLine("Inorder:");
             Inorder(root);
         }
-
+        //O(n)
         public void DisplayPreorder()
         {
             Console.WriteLine("Preorder:");
             Preorder(root);
         }
-
+        //O(n)
         public void DisplayPostorder()
         {
             Console.WriteLine("Postorder:");
             Postorder(root);
         }
-
+        //O(n)
         private void Inorder(BinaryTreeNode node)//left, root, right
         {
             if (node != null)
@@ -98,7 +146,7 @@ namespace DS__Trees
                 Inorder(node.Right);
             }
         }
-
+        //O(n)
         private void Preorder(BinaryTreeNode node)//root, left, right
         {
             if (node != null)
@@ -108,7 +156,7 @@ namespace DS__Trees
                 Preorder(node.Right);
             }
         }
-
+        //O(n)
         private void Postorder(BinaryTreeNode node)//left, right, root
         {
             if (node != null)
