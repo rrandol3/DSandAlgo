@@ -15,6 +15,9 @@ namespace DS__Trees
             tree.Insert(4);
             tree.Insert(6);
             tree.Insert(20);
+            tree.DisplayInorder();
+            tree.DisplayPreorder();
+            tree.DisplayPostorder();
         }
     }
 }
