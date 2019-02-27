@@ -14,7 +14,7 @@ namespace DS__Trees
 
         public void Insert(int value)
         {
-            BinaryTreeNode newNode = new BinaryTreeNode(value);
+            BinaryTreeNode newNode = new BinaryTreeNode(value);//creation on newNode
             if (root == null)
             {
                 root = newNode;
@@ -22,35 +22,53 @@ namespace DS__Trees
             else
             {
                 BinaryTreeNode current = root;
-                BinaryTreeNode parent;
-                while (true)
+                while (true)//keep looping until we find somewhere to insert item
                 {
-                    parent = current;
-                    if (value < current.Value)//got left?
+                    if (value < current.Value)//go to left?
                     {
-                        current = current.Left;
-                        if (current == null)
+                        if (current.Left == null)//check if current.Left is null
                         {
-                            parent.Left = newNode;
-                            return;
+                            current.Left = newNode;//if null assign newNode to current.Left
+                            return;//exit function
                         }
+                        current = current.Left;//set current to current.Left because current.Left has a value already
                     }
-                    else //or go right?
+                    else //or go to right?
                     {
-                        current = current.Right;
-                        if (current == null)
+                        if (current.Right == null)//check if current.Right is null
                         {
-                            parent.Right = newNode;
-                            return;
+                            current.Right = newNode;//if null assign newNode to current.Right
+                            return;//exit function
                         }
+                        current = current.Right;//set current to current.Right because current.Right has a value already
                     }
                 }
             }
         }
 
-        public bool LookUp(int value)
+        public bool IsPresent(int value)
         {
-            return false;
+            if (root == null)
+            {
+                return false;
+            }
+            BinaryTreeNode current = root;
+            while (current != null)//loop until current is null or value is found
+            {
+                if (value < current.Value)//if less 
+                {
+                    current = current.Left;//go to the left 
+                }
+                else if (value > current.Value)//if greater
+                {
+                    current = current.Right;//got to right
+                }
+                else if (value == current.Value)//if value found
+                {
+                    return true;//return true
+                }
+            }
+            return false;//else return false
         }
 
         public void DisplayInorder()
