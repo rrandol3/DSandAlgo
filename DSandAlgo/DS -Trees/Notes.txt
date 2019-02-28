@@ -24,3 +24,27 @@ Pros & Cons
 	+ Ordered
 	+ Flexible Size
 	- No O(1) operations
+
+AVL Tree = self balancing Binary Search Tree, 2 heights of 2 child subtrees of any node differ at most one
+		   if at any time they differ by more than 1 rebalancing is done
+
+Red-Black Tree = Each node of the binary tree has an extra bit, and that bit is often interpreted as the color 
+				(red or black) of the node. These color bits are used to ensure the tree remains approximately 
+				balanced during insertions and deletions.
+
+Binary Heap = a complete binary tree which satisfies the heap ordering property. (used for Priority Queues)
+			  The ordering can be one of two types:
+				-the min-heap property: the value of each node is greater than or equal to the value 
+				of its parent, with the minimum-value element at the root.
+				-the max-heap property: the value of each node is less than or equal to the value of its 
+				parent, with the maximum-value element at the root.
+					Big O
+						lookup O(n)
+						insert O(logN)
+						delete O(logN)
+
+Trie = a kind of search tree—an ordered tree data structure used to store a dynamic set or associative 
+	   array where the keys are usually strings. Unlike a binary search tree, no node in the tree stores
+	   the key associated with that node; instead, its position in the tree defines the key with which 
+	   it is associated. All the descendants of a node have a common prefix of the string associated with 
+	   that node, and the root is associated with the empty string. 
