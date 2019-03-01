@@ -1,0 +1,16 @@
+﻿DS-Graphs
+
+Graphs = composed of Nodes and Edges
+		Nodes - the items in the Graph
+		Edges - connects the Nodes
+
+Types of Graphs:
+	Directed - only goes in one direction, eg. 1 way street
+	Undirected - can go in both directions, eg. highway between to cities
+	Weighted - contains values on Edges, eg. shortest path with Google maps
+	Unweighted - Edges simply show connection, eg. course prereqs. 
+	Cyclic - when Nodes(vertices) are connected in a circular fashion(contains cycles), eg. roads
+	Acyclic - contains no cycles, eg. course prereqs. 
+
+
+

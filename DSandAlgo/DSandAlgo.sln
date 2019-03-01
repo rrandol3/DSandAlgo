@@ -19,6 +19,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DS-Stacks + Queues", "DS-St
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DS -Trees", "DS -Trees\DS -Trees.csproj", "{08E3A3AB-D4E0-4AB8-B6EF-AE2F441D9136}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DS-Graphs", "DS-Graphs\DS-Graphs.csproj", "{0C2DE6C6-67A9-4E89-9C31-8B676C7885E8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -57,6 +59,10 @@ Global
 		{08E3A3AB-D4E0-4AB8-B6EF-AE2F441D9136}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{08E3A3AB-D4E0-4AB8-B6EF-AE2F441D9136}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{08E3A3AB-D4E0-4AB8-B6EF-AE2F441D9136}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0C2DE6C6-67A9-4E89-9C31-8B676C7885E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0C2DE6C6-67A9-4E89-9C31-8B676C7885E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0C2DE6C6-67A9-4E89-9C31-8B676C7885E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0C2DE6C6-67A9-4E89-9C31-8B676C7885E8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
