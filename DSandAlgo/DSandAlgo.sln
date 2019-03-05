@@ -21,6 +21,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DS -Trees", "DS -Trees\DS -
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DS-Graphs", "DS-Graphs\DS-Graphs.csproj", "{0C2DE6C6-67A9-4E89-9C31-8B676C7885E8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Algorithms - Recursion", "Algorithms - Recursion\Algorithms - Recursion.csproj", "{8A48BFAF-FB42-4380-86E1-2AEDF6329FC0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +65,10 @@ Global
 		{0C2DE6C6-67A9-4E89-9C31-8B676C7885E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0C2DE6C6-67A9-4E89-9C31-8B676C7885E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0C2DE6C6-67A9-4E89-9C31-8B676C7885E8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8A48BFAF-FB42-4380-86E1-2AEDF6329FC0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8A48BFAF-FB42-4380-86E1-2AEDF6329FC0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8A48BFAF-FB42-4380-86E1-2AEDF6329FC0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8A48BFAF-FB42-4380-86E1-2AEDF6329FC0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
