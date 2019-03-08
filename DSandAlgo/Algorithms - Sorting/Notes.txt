@@ -1,2 +1,3 @@
 ﻿Algorithms - Sorting
 
+Bubble Sort = bubbles up the larger number with muliple pass throughs
