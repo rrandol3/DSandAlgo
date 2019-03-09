@@ -1,3 +1,30 @@
 ﻿Algorithms - Sorting
 
-Bubble Sort = bubbles up the larger number with muliple pass throughs
+Bubble Sort = bubbles up the larger item with muliple pass throughs
+	Time = O(n^2)
+	Space = O(1)
+	When to use = never really, mostly used for educational purposes
+
+Selection Sort = scans of list of items and swaps the smallest element with the first position
+	Time = O(n^2)
+	Space = O(1)
+	When to use = never really, mostly used for educational purposes
+
+Insertion Sort = useful when list is already semi sorted, finds place in the already sorted portion for next item
+	Time = O(n^2)
+	Space = O(1)
+	When to use = small inputs, items are mostly sorted
+
+Merge Sort = divide and conquer sort, divides array into many small arrays then sorts each array, finally combining all sorted arrays
+	Time = O(n log n)
+	Space = O(n)
+	When to use = external sorting of huge files space complexity won't be a concern
+
+Quick Sort = each step we select a pivot, all items > than pivot go to the right and < items go to left, sort each side, and merge sorted sides
+	Time = O(n^2)
+	Space = O(n log n)
+	When to use = when you sure about correct pivot points 
+
+**Stable Sorting Alogorithms = if two objects with equal keys appear in the same order in sorted output as they appear in the input array to be sorted.
+
+	
