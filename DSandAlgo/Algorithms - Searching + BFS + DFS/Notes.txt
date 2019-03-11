@@ -6,3 +6,23 @@ Linear Search = checks each item in the list to find match
 Binary Search = items have to sorted, divide conquer, split array into left and right arrays, check to see if itemToFind is greater or less than mid item
 				if less, repeat process seach the left, else repeat process searching the right
 	Time = O(log n)
+	Space = Recursive Approach O(n)
+
+Breadth First Search(BFS)/Traversal = go left to right, on each level until you find the item or the tree ends
+	Time = O(n)
+	+ Shortest Path
+	+ Closer Nodes
+	- More Memory
+
+Depth First Search(DFS/Traveral = go left all the way down, then up to the parent that has a unvisited child, repeat same process on the right until
+							  item is found or tree ends
+	Time = O(n), Space is O(h) where h is the height of the tree
+	+ Less Memory
+	+ Does Path Exist?
+	- Can Get Slow
+
+	DFS Types:
+		Inorder = left, root, right (items are in the numerical order)
+		Preorder = root, left, right (good for recreating a tree)
+		Postorder = left, right, root 
+

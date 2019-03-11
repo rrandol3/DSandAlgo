@@ -15,13 +15,12 @@ namespace DS__Trees
             tree.Insert(4);
             tree.Insert(6);
             tree.Insert(20);
-            tree.Insert(117);
+            tree.Insert(170);
             tree.Insert(15);
             tree.Insert(1);
             tree.DisplayInorder();
             tree.DisplayPreorder();
             tree.DisplayPostorder();
-            Console.WriteLine("Is {0} present: {1}", 5, tree.IsPresent(5));
         }
     }
 }

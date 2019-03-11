@@ -10,9 +10,9 @@ namespace Algorithms___Searching___BFS___DFS
     {
         static void Main(string[] args)
         {
-            int[] numArray = { 9, 5, 3, 6, 8, 2, 1 };
-            int itemToFind = 19;
-            Console.WriteLine("Is {0} present in the list: {1}", itemToFind, BinarySearch(numArray, itemToFind));
+            int[] numArray = { 1, 2, 3, 5, 6, 8, 9 };
+            int itemToFind = 0;
+            Console.WriteLine("Is {0} present in the list: {1}", itemToFind, BinarySearcRecursive(numArray, itemToFind));
         }
 
         //O(n)
@@ -32,9 +32,10 @@ namespace Algorithms___Searching___BFS___DFS
         //O(log n)
         public static bool BinarySearch(int[] numArray, int itemToFind)
         {
+            //{ 1, 2, 3, 5, 6, 8, 9 };
             int low = 0;
             int high = numArray.Length - 1;
-            while (low < high)
+            while (low <= high)
             {
                 int mid = low + (high - low) / 2;
                 if (itemToFind == numArray[mid])
@@ -51,6 +52,37 @@ namespace Algorithms___Searching___BFS___DFS
                 }
             }
             return false;
+        }
+
+        //O(log n), Space = O(n)
+        public static bool BinarySearcRecursive(int[] numArray, int itemToFind)
+        {
+            //{ 1, 2, 3, 5, 6, 8, 9 };
+            int low = 0;
+            int high = numArray.Length - 1;
+            return BinarySearchRecursiveHelper(numArray, low, high, itemToFind);
+        }
+        public static bool BinarySearchRecursiveHelper(int[] numArray, int low, int high, int itemToFind)
+        {
+            int mid = low + (high - low) / 2;
+            if (numArray[mid] == itemToFind)
+            {
+                return true;
+            }
+            if (low >= high)
+            {
+                return false;
+            }
+            if (itemToFind > numArray[mid])
+            {
+                low = mid + 1;
+                return BinarySearchRecursiveHelper(numArray, low, high, itemToFind);
+            }
+            else
+            {
+                high = mid - 1;
+                return BinarySearchRecursiveHelper(numArray, low, high, itemToFind);
+            }
         }
     }
 }

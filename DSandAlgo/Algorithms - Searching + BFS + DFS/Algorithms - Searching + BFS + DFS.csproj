@@ -52,5 +52,11 @@
   <ItemGroup>
     <Content Include="Notes.txt" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DS -Trees\DS -Trees.csproj">
+      <Project>{08e3a3ab-d4e0-4ab8-b6ef-ae2f441d9136}</Project>
+      <Name>DS -Trees</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

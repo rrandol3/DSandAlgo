@@ -118,25 +118,96 @@ namespace DS__Trees
             }
             return false;//else return false
         }
+
         //O(n)
+        public List<int> BreadthFirstSearch()
+        {
+            BinaryTreeNode current = root;//holds current 
+            List<int> list = new List<int>();//holds the items in the tree
+            Queue<BinaryTreeNode> queue = new Queue<BinaryTreeNode>();//gets the items that have been visited
+            queue.Enqueue(current);//add current item to queue
+            while (queue.Count > 0)//while queue is > 0
+            {
+                current = queue.Dequeue();//remove item from queue and set to current
+                Console.Write(" " + current.Value);
+                list.Add(current.Value);//add current value to list
+                if (current.Left != null)//check to see if current item.left child is empty
+                {
+                    queue.Enqueue(current.Left);//if not add current item.left child to the queue
+                }
+                if (current.Right != null)//check to see if current item.right child is empty
+                {
+                    queue.Enqueue(current.Right);//if not add current item.right child to the queue
+                }
+            }
+            return list;//return list of items
+        }
+        //O(n)
+        public List<int> BreadthFirstSearchRecursive()
+        {
+            List<int> list = new List<int>();
+            Queue<BinaryTreeNode> queue = new Queue<BinaryTreeNode>();
+            queue.Enqueue(root);
+            return BFSRecursiveHelper(list, queue);
+        }
+
+        public List<int> BFSRecursiveHelper(List<int> list, Queue<BinaryTreeNode> queue)
+        {
+            if (queue.Count == 0)
+            {
+                return list;
+            }
+
+            BinaryTreeNode current = queue.Dequeue();//remove item from queue and set to current
+            Console.Write(" " + current.Value);
+            list.Add(current.Value);//add current value to list
+            if (current.Left != null)//check to see if current item.left child is empty
+            {
+                queue.Enqueue(current.Left);//if not add current item.left child to the queue
+            }
+            if (current.Right != null)//check to see if current item.right child is empty
+            {
+                queue.Enqueue(current.Right);//if not add current item.right child to the queue
+            }
+
+            return BFSRecursiveHelper(list, queue);
+        }
+
+        //O(n)
+        public void DisplayBFS()
+        {
+            Console.WriteLine("BFS:");
+            BreadthFirstSearchRecursive();
+            Console.WriteLine();
+        }
+
+        //O(n)
+        public void DisplayBFSRecursive()
+        {
+            Console.WriteLine("BFS Recursive:");
+            BreadthFirstSearch();
+            Console.WriteLine();
+        }
+
+        //O(n) DFS
         public void DisplayInorder()
         {
             Console.WriteLine("Inorder:");
             Inorder(root);
         }
-        //O(n)
+        //O(n) DFS
         public void DisplayPreorder()
         {
             Console.WriteLine("Preorder:");
             Preorder(root);
         }
-        //O(n)
+        //O(n) DFS
         public void DisplayPostorder()
         {
             Console.WriteLine("Postorder:");
             Postorder(root);
         }
-        //O(n)
+        //O(n) DFS
         private void Inorder(BinaryTreeNode node)//left, root, right
         {
             if (node != null)
@@ -146,7 +217,7 @@ namespace DS__Trees
                 Inorder(node.Right);
             }
         }
-        //O(n)
+        //O(n) DFS
         private void Preorder(BinaryTreeNode node)//root, left, right
         {
             if (node != null)
@@ -156,7 +227,7 @@ namespace DS__Trees
                 Preorder(node.Right);
             }
         }
-        //O(n)
+        //O(n) DFS
         private void Postorder(BinaryTreeNode node)//left, right, root
         {
             if (node != null)
