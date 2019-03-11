@@ -1,0 +1,15 @@
+﻿ Algorithms - Dynamic Programming
+
+ Dynamic Programming = optimization technique using cache (Divide & Conquer + Memoization)
+
+ Caching = a way to store values so that you can use them later on
+
+ Memoization = a specific form of caching that involves caching the return value (a way to remember a solution to sub problem)
+
+ Rules
+	1. Can be divide into sub problems
+	2. Recursive Solution
+	3. Are there repetive sub problems
+	4. Memoize sub problems
+	5. Demand a raise from your boss
+

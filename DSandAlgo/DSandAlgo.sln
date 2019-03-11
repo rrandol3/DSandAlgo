@@ -27,6 +27,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Algorithms - Sorting", "Alg
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Algorithms - Searching + BFS + DFS", "Algorithms - Searching + BFS + DFS\Algorithms - Searching + BFS + DFS.csproj", "{FC5796E4-A4C0-4AFD-85DD-AA6115F404EE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Algorithms - Dynamic Programming", "Algorithms - Dynamic Programming\Algorithms - Dynamic Programming.csproj", "{4539EEED-88AE-405D-98D3-0BA348B8CC4A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -81,6 +83,10 @@ Global
 		{FC5796E4-A4C0-4AFD-85DD-AA6115F404EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FC5796E4-A4C0-4AFD-85DD-AA6115F404EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FC5796E4-A4C0-4AFD-85DD-AA6115F404EE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4539EEED-88AE-405D-98D3-0BA348B8CC4A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4539EEED-88AE-405D-98D3-0BA348B8CC4A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4539EEED-88AE-405D-98D3-0BA348B8CC4A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4539EEED-88AE-405D-98D3-0BA348B8CC4A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
