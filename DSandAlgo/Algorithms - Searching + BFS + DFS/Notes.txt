@@ -26,3 +26,7 @@ Depth First Search(DFS/Traveral = go left all the way down, then up to the paren
 		Preorder = root, left, right (good for recreating a tree)
 		Postorder = left, right, root 
 
+Shortest Path Algorithms for Graphs
+	Bellman-Ford = can use negative weight edges with graphs O(n^2)
+	Dijkstra =  finding the shortest paths between nodes in a graph, which may represent, for example, road networks
+
