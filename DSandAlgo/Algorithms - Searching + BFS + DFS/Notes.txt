@@ -1,0 +1,8 @@
+﻿Algorithms - Searching BFS + DFS
+
+Linear Search = checks each item in the list to find match
+	Time = O(n)
+
+Binary Search = items have to sorted, divide conquer, split array into left and right arrays, check to see if itemToFind is greater or less than mid item
+				if less, repeat process seach the left, else repeat process searching the right
+	Time = O(log n)
