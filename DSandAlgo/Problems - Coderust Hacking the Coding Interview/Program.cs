@@ -10,13 +10,11 @@ namespace Problems___Coderust_Hacking_the_Coding_Interview
     {
         static void Main(string[] args)
         {
-            int[] arr1 = { 3, 4, 0, 9, 0, 3 };
-            MoveZeroesToLeft2(arr1);
-            for (int i = 0; i < arr1.Length; i++)
-            {
-                Console.Write(" " + arr1[i]);
-            }
-            Console.WriteLine();
+            int[] arr = { 8, 5, 12, 9, 19, 1 };
+            //foreach (var item in MaxProfit(arr))
+            //{
+            //    Console.WriteLine(item.Key, item.Value);
+            //}
         }
 
         //Given a sorted array of integers, return the index of the given key. Return -1 if not found.
@@ -366,6 +364,12 @@ namespace Problems___Coderust_Hacking_the_Coding_Interview
                 arr[write_index] = 0;
                 write_index--;
             }
+        }
+
+        //Given a list of stock prices for n days, find the maximum profit with a single buy/sell activity.
+        public static void MaxProfit(int[] arr)
+        {
+            //{ 8, 5, 12, 9, 19, 1 };
         }
     }
 }
