@@ -10,17 +10,14 @@ namespace Problems___Coderust_Hacking_the_Coding_Interview
     {
         static void Main(string[] args)
         {
-            int[] arr1 = { 1, 1, 1, 2, 2, 2, 2, 2, 3, 3, 3, 4, 4, 4, 4, 5, 5, 5, 6, 6, 6, 6, 6, 6 };
-            int key = 2;
-            foreach (var item in FindLowHighIndex(arr1, key))
+            int[] arr1 = { 3, 4, 0, 9, 0, 3 };
+            MoveZeroesToLeft2(arr1);
+            for (int i = 0; i < arr1.Length; i++)
             {
-                Console.Write(" " + item);
+                Console.Write(" " + arr1[i]);
             }
             Console.WriteLine();
-            Console.WriteLine(FindLowIndex(arr1, key));
-            Console.WriteLine(FindHighIndex(arr1, key));
-            Console.WriteLine();
-;        }
+        }
 
         //Given a sorted array of integers, return the index of the given key. Return -1 if not found.
         //Time O(log n), Space = O(1)
@@ -316,9 +313,59 @@ namespace Problems___Coderust_Hacking_the_Coding_Interview
 
         //Given an integer array, move all elements that are equal to 0 to the left while 
         //maintaining the order of other elements in the array.
+        //My Approach, Time = O(n), Space = O(n)
         public static void MoveZeroesToLeft(int[] arr)
         {
+            int zeros = 0;
+            Queue<int> list = new Queue<int>();
+            for (int i = 0; i < arr.Length; i++)
+            {
+                if (arr[i] == 0)
+                {
+                    zeros++;
+                }
+                else
+                {
+                    list.Enqueue(arr[i]);
+                }
+            }
+            for (int i = 0; i < zeros; i++)
+            {
+                arr[i] = 0;
+            }
+            for (int i = zeros; i < arr.Length; i++)
+            {
+                arr[i] = list.Dequeue();
+            }
+        }
 
+        //*****
+        //Given an integer array, move all elements that are equal to 0 to the left while 
+        //maintaining the order of other elements in the array.
+        //Better Approach, Time = O(n), Space = O(1)
+        public static void MoveZeroesToLeft2(int[] arr)
+        {
+            if (arr == null)
+            {
+                return;
+            }
+
+            int write_index = arr.Length - 1;
+            int read_index = arr.Length - 1;
+            while (read_index >= 0)
+            {
+                if (arr[read_index] != 0)
+                {
+                    arr[write_index] = arr[read_index];
+                    write_index--;
+                }
+                read_index--;
+            }
+            while (write_index >= 0)
+            {
+                arr[write_index] = 0;
+                write_index--;
+            }
         }
     }
 }
