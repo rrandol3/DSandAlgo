@@ -11,10 +11,11 @@ namespace Problems___Coderust_Hacking_the_Coding_Interview
         static void Main(string[] args)
         {
             int[] arr = { 8, 5, 12, 9, 19, 1 };
-            //foreach (var item in MaxProfit(arr))
-            //{
-            //    Console.WriteLine(item.Key, item.Value);
-            //}
+            QuickSort(arr);
+            foreach (var item in arr)
+            {
+                Console.WriteLine(item);
+            }
         }
 
         //Given a sorted array of integers, return the index of the given key. Return -1 if not found.
@@ -366,10 +367,77 @@ namespace Problems___Coderust_Hacking_the_Coding_Interview
             }
         }
 
+        //*****
         //Given a list of stock prices for n days, find the maximum profit with a single buy/sell activity.
-        public static void MaxProfit(int[] arr)
+        //Time = O(n), Space = O(1)
+        public static List<int> MaxProfit(int[] arr)
         {
             //{ 8, 5, 12, 9, 19, 1 };
+            List<int> results = new List<int>();
+            int currentProfit = 0;
+            int buy = arr[0];
+            int sell = arr[1];
+            int globalProfit = sell - buy;
+            for (int i = 1; i < arr.Length; i++)
+            {
+                currentProfit = arr[i] - buy;
+                if (currentProfit > globalProfit)
+                {
+                    globalProfit = currentProfit;
+                    sell = arr[i];
+                }
+                if (buy > arr[i])
+                {
+                    buy = arr[i];
+                }
+            }
+            results.Add(sell - globalProfit);
+            results.Add(sell);
+            return results;
+        }
+
+        //*****
+        //Given an integer array, sort it in ascending order using quicksort.
+        //Time = O(n log n), Space = O(1)
+        public static void QuickSort(int[] arr)
+        {
+            QuickSortRecursion(arr, 0, arr.Length - 1);
+        }
+        public static void QuickSortRecursion(int[] arr, int low, int high)
+        {
+            if (high > low)
+            {
+                int pivot_index = Partition(arr, low, high);
+
+                QuickSortRecursion(arr, low, pivot_index - 1);
+                QuickSortRecursion(arr, pivot_index + 1, high);
+            }
+        }
+        public static int Partition(int[] arr, int low, int high)
+        {
+            int pivot_value = arr[low];
+            int i = low;
+            int j = high;
+
+            while (i < j)
+            {
+                while (i <= high && arr[i] <= pivot_value) i++;
+                while (arr[j] > pivot_value) j--;
+
+                if (i < j)
+                {
+                    // swap arr[i] and arr[j]
+                    int temp = arr[i];
+                    arr[i] = arr[j];
+                    arr[j] = temp;
+                }
+            }
+
+            arr[low] = arr[j];
+            arr[j] = pivot_value;
+
+            // return the pivot index
+            return j;
         }
     }
 }
