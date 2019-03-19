@@ -473,15 +473,38 @@ namespace Problems___Coderust_Hacking_the_Coding_Interview
             return false;
         }
 
+        //*****
         //Given the pointer/reference to the head of a singly linked list, reverse it and 
         //return the pointer/reference to the head of reversed linked list.
+        //Time = O(n), Space = O(1)
         public static Node ReverseSinglyLinkedList(Node head)
         {
             //{ 5, 7, 1, 2, 8, 4, 3 }
             //5 -> 7 -> 1 -> 2 -> 8 -> 4 -> 3
             Node current = head;
-            
-            return current;
+            // no need to reverse if head is null 
+            // or there is only 1 node.
+            if (head == null ||
+                head.Next == null)
+            {
+                return head;
+            }
+
+            Node list_to_do = head.Next;
+            Node reversed_list = head;
+
+            reversed_list.Next = null;
+
+            while (list_to_do != null)
+            {
+                Node temp = list_to_do;
+                list_to_do = list_to_do.Next;
+
+                temp.Next = reversed_list;
+                reversed_list = temp;
+            }
+
+            return reversed_list;
         }
     }
 }
