@@ -49,5 +49,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DS-Linked Lists\DS-Linked Lists.csproj">
+      <Project>{870fb292-c81b-48f0-aea7-36220a56d390}</Project>
+      <Name>DS-Linked Lists</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using DS_Linked_Lists;
 
 namespace Problems___Coderust_Hacking_the_Coding_Interview
 {
@@ -10,12 +11,7 @@ namespace Problems___Coderust_Hacking_the_Coding_Interview
     {
         static void Main(string[] args)
         {
-            int[] arr = { 8, 5, 12, 9, 19, 1 };
-            QuickSort(arr);
-            foreach (var item in arr)
-            {
-                Console.WriteLine(item);
-            }
+
         }
 
         //Given a sorted array of integers, return the index of the given key. Return -1 if not found.
@@ -88,7 +84,7 @@ namespace Problems___Coderust_Hacking_the_Coding_Interview
                 }
                 results.Add(max);//add max of current subarray to results
             }
-                     
+
             return results;
         }
 
@@ -195,7 +191,7 @@ namespace Problems___Coderust_Hacking_the_Coding_Interview
                 n = n + length;
             }
             ReverseArray(arr, 0, length - 1);
-            ReverseArray(arr, 0, n-1);
+            ReverseArray(arr, 0, n - 1);
             ReverseArray(arr, n, length - 1);
 
         }
@@ -439,5 +435,54 @@ namespace Problems___Coderust_Hacking_the_Coding_Interview
             // return the pivot index
             return j;
         }
+
+        //*****
+        //You are given an array (list) of interval pairs as input where each interval has a 
+        //start and end timestamp. The input array is sorted by starting timestamps. You are 
+        //required to merge overlapping intervals and return output array (list).
+        //Consider the input array below.Intervals(1, 5), (3, 7), (4, 6), (6, 8) are overlapping 
+        //so they should be merged to one big interval(1, 8). Similarly, intervals(10, 12) 
+        //and(12, 15) are also overlapping and should be merged to(10, 15).
+        //Time = O(n), Space = O(n)
+        public static List<Tuple<int, int>> MergeOverlappingIntervals(List<Tuple<int, int>> pairs)
+        {
+            //Intervals(1, 5), (3, 7), (4, 6), (6, 8)
+
+            return new List<Tuple<int, int>>();
+        }
+
+        //Given an array of integers and a value, determine if there are any two integers 
+        //in the array whose sum is equal to the given value.
+        //Time = O(n), Space = O(1)
+        public static bool SumOfTwoValues(int[] arr, int val)
+        {
+            //{ 5, 7, 1, 2, 8, 4, 3 }
+            HashSet<int> hs = new HashSet<int>();
+            for (int i = 0; i < arr.Length; i++)
+            {
+                int temp = arr[i] - val;
+                if (hs.Contains(temp))
+                {
+                    return true;
+                }
+                else
+                {
+                    hs.Add(arr[i]);
+                }
+            }
+            return false;
+        }
+
+        //Given the pointer/reference to the head of a singly linked list, reverse it and 
+        //return the pointer/reference to the head of reversed linked list.
+        public static Node ReverseSinglyLinkedList(Node head)
+        {
+            //{ 5, 7, 1, 2, 8, 4, 3 }
+            //5 -> 7 -> 1 -> 2 -> 8 -> 4 -> 3
+            Node current = head;
+            
+            return current;
+        }
     }
 }
+
