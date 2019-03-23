@@ -14,9 +14,9 @@ namespace Problems___Coderust_Hacking_the_Coding_Interview
             Node node = new Node(1);
             node.Next = new Node(2);
             node.Next.Next = new Node(3);
-            node.Next.Next.Next = new Node(3);
+            node.Next.Next.Next = new Node(4);
             node.Next.Next.Next.Next = new Node(5);
-            var test = RemoveDuplicates(node);
+            var test = DeleteNodeFromLinkedList(node, 5);
             while (test != null)
             {
                 Console.Write(" " + test.Value);
@@ -520,7 +520,7 @@ namespace Problems___Coderust_Hacking_the_Coding_Interview
         //*****
         //Remove duplicate nodes from a linked list of integers while keeping 
         //only the first occurrence of duplicates.
-        //Time = O(n), Space = O(1)
+        //Time = O(n), Space = O(n)
         public static Node RemoveDuplicates(Node head)
         {
             HashSet<int> hs = new HashSet<int>();
@@ -541,7 +541,44 @@ namespace Problems___Coderust_Hacking_the_Coding_Interview
             return head;
         }
 
+        //*****
         //Given the head of a linked list and a key, delete the node with this given key from the linked list.
+        //Time = O(n), Space = O(1)
+        public static Node DeleteNodeFromLinkedList(Node head, int key)
+        {
+            Node prev = null;
+            Node current = head;
+
+            while (current != null)
+            {
+                if (current.Value == key)
+                {
+                    if (current == head)
+                    {
+                        head = head.Next;
+                        current = head;
+                    }
+                    else
+                    {
+                        prev.Next = current.Next;
+                        current = current.Next;
+                    }
+                }
+                else
+                {
+                    prev = current;
+                    current = current.Next;
+                }
+            }
+
+            // key not found in list
+            if (current == null)
+            {
+                return head;
+            }
+
+            return head;
+        }
     }
 }
 
