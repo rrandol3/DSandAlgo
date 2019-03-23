@@ -11,7 +11,17 @@ namespace Problems___Coderust_Hacking_the_Coding_Interview
     {
         static void Main(string[] args)
         {
-
+            Node node = new Node(1);
+            node.Next = new Node(2);
+            node.Next.Next = new Node(3);
+            node.Next.Next.Next = new Node(3);
+            node.Next.Next.Next.Next = new Node(5);
+            var test = RemoveDuplicates(node);
+            while (test != null)
+            {
+                Console.Write(" " + test.Value);
+                test = test.Next;
+            }
         }
 
         //Given a sorted array of integers, return the index of the given key. Return -1 if not found.
@@ -506,6 +516,32 @@ namespace Problems___Coderust_Hacking_the_Coding_Interview
 
             return reversed_list;
         }
+
+        //*****
+        //Remove duplicate nodes from a linked list of integers while keeping 
+        //only the first occurrence of duplicates.
+        //Time = O(n), Space = O(1)
+        public static Node RemoveDuplicates(Node head)
+        {
+            HashSet<int> hs = new HashSet<int>();
+            Node current = head;
+            hs.Add(current.Value);
+            while (current.Next != null)
+            {
+                if (!hs.Contains(current.Next.Value))
+                {
+                    hs.Add(current.Next.Value);
+                    current = current.Next;
+                }
+                else
+                {
+                    current.Next = current.Next.Next;
+                }
+            }
+            return head;
+        }
+
+        //Given the head of a linked list and a key, delete the node with this given key from the linked list.
     }
 }
 
