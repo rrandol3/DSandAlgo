@@ -521,7 +521,7 @@ namespace Problems___Coderust_Hacking_the_Coding_Interview
         //Remove duplicate nodes from a linked list of integers while keeping 
         //only the first occurrence of duplicates.
         //Time = O(n), Space = O(n)
-        public static Node RemoveDuplicates(Node head)
+        public static Node RemoveDuplicatesLinkedList(Node head)
         {
             HashSet<int> hs = new HashSet<int>();
             Node current = head;
@@ -577,6 +577,17 @@ namespace Problems___Coderust_Hacking_the_Coding_Interview
                 return head;
             }
 
+            return head;
+        }
+
+        //Given the head pointer of a linked list, sort it in ascending order using insertion sort.
+        public static Node InsertionSortLinkedList(Node head)
+        {
+            Node current = head;
+            while (current != null)
+            {
+
+            }
             return head;
         }
     }
