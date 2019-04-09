@@ -11,7 +11,7 @@ namespace Algorithms___Sorting
         static void Main(string[] args)
         {
             int[] numArray = { 9, 5, 3, 6, 8, 2, 1 };
-            SelectionSort(numArray);
+            QuickSort(numArray, 0, numArray.Length - 1);
             for (int i = 0; i < numArray.Length; i++)
             {
                 Console.Write(" " + numArray[i]);
@@ -129,10 +129,48 @@ namespace Algorithms___Sorting
             return newArray;
         }
 
-        //O(n^2) TODO: need to research and implement
-        public static void QuickSort(int[] numArray)
+        //O(n^2)
+        public static void QuickSort(int[] nums, int low, int high)
         {
+            int pivot;
+            if (high > low)
+            {
+                pivot = Partition(nums, low, high);
+                QuickSort(nums, low, pivot - 1);
+                QuickSort(nums, pivot + 1, high);
+            }
+        }
 
+        public static int Partition(int[] nums, int low, int high)
+        {
+            int pivotItem = nums[low];
+            int left = low;
+            int right = high;
+            while (left < right)
+            {
+                while (nums[left] <= pivotItem && left < right)
+                {
+                    left++;
+                }
+                while (nums[right] > pivotItem)
+                {
+                    right--;
+                }
+                if (left < right)
+                {
+                    Swap(nums, left, right);
+                }
+            }
+            nums[low] = nums[right];
+            nums[right] = pivotItem;
+            return right;
+        }
+
+        public static void Swap(int[] nums, int left, int right)
+        {
+            int temp = nums[left];
+            nums[left] = nums[right];
+            nums[right] = temp;
         }
         
     }
