@@ -48,3 +48,9 @@ Trie = a kind of search tree—an ordered tree data structure used to store a dy
 	   the key associated with that node; instead, its position in the tree defines the key with which 
 	   it is associated. All the descendants of a node have a common prefix of the string associated with 
 	   that node, and the root is associated with the empty string. 
+
+BST Traversal
+ - DFS
+	-Inorder = left, root, right
+	-Preorder = root, left, right
+	-Postorder = left, right, root

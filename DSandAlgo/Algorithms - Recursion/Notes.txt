@@ -13,5 +13,5 @@ Rules: When to use Recursion
 	- Every time you are using a tree or converting something into a tree, consider recursion
 	- Problem allows for divsion of problems into smaller instances of the same problem
 	- Each instance of the problem is identical in nature
-	- The solutions of the each sub-problem can be combined to solve teh problem at hand
+	- The solutions of the each sub-problem can be combined to solve the problem at hand
 	- Divide and Conquer using Recursion

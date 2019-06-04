@@ -11,12 +11,12 @@ namespace Algorithms___Recursion
         int counter = 0;
         static void Main(string[] args)
         {
-            //Program program = new Program();
-            //var test = program.Inception();
-            //Console.WriteLine(test);
+            Program program = new Program();
+            var test = program.Inception();
+            Console.WriteLine(test);
             //Console.WriteLine(FactorialRecursive(5));
             //Console.WriteLine(FibonacciIterative(12));
-            Console.WriteLine(ReverseStringRecursive("yoyo master"));
+            //Console.WriteLine(ReverseStringRecursive("yoyo master"));
         }
 
         //O(n)
@@ -35,8 +35,10 @@ namespace Algorithms___Recursion
         {
             if (number == 2)
             {
+                Console.WriteLine("Reached based case with number of " + number);
                 return 2;
             }
+            Console.WriteLine(number);
             return number * FactorialRecursive(number - 1);
         }
         //O(n)

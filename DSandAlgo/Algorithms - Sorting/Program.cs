@@ -8,6 +8,7 @@ namespace Algorithms___Sorting
 {
     class Program
     {
+        //https://visualgo.net/en/sorting
         static void Main(string[] args)
         {
             int[] numArray = { 9, 5, 3, 6, 8, 2, 1 };

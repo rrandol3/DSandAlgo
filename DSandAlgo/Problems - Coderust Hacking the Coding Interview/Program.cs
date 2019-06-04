@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using DS_Linked_Lists;
 
 namespace Problems___Coderust_Hacking_the_Coding_Interview
 {
@@ -11,10 +10,9 @@ namespace Problems___Coderust_Hacking_the_Coding_Interview
     {
         static void Main(string[] args)
         {
-            int[] nums = new int[0];
-            int windowSize = 0;
-            var ans = FindMaxSlidingWindow2(nums, windowSize);
-            foreach (var num in ans)
+            int value = 37;
+            string binary = Convert.ToString(value, 2);
+            foreach (var num in binary)
             {
                 Console.Write(" " + num);
             }
@@ -86,62 +84,27 @@ namespace Problems___Coderust_Hacking_the_Coding_Interview
         //Find Maximum in Sliding Window
         //Given a large array of integers and a window of size w, find the current maximum value 
         //in the window as the window slides through the entire array.
-        public static int[] FindMaxSlidingWindow(int[] nums, int windowSize)
+        public static List<int> FindMaxSlidingWindow(int[] nums, int w)
         {
-            //nums = { -4, 2, -5, 3, 6 }
-            //windowSize = 3
-            int[] ans = new int[nums.Length - windowSize + 1];//creates a array to hold the ans
-            for (int i = 0; i <= nums.Length - windowSize; i++)//incrementer for the set of numbers
-            {
-                int max = nums[i];//set max to i index
-                for (int j = 1; j < windowSize; j++)//incrementer for each num in sub array
-                {
-                    if (nums[i + j] > max)//check if nums[i + j] in sub array is greater than max
-                    {
-                        max = nums[i + j];//assign nums[i + j] to max
-                    }
-                    ans[i] = max;//assign max to ans
-                }
-            }
-            return ans;//return ans
+            List<int> ans = new List<int>();
+           
+            return ans;
         }
 
-        public static int[] FindMaxSlidingWindow2(int[] nums, int windowSize)
+        public static void ReverseWords(char[] sentence)
         {
-            //nums = { -4, 2, -5, 3, 6 }
-            //windowSize = 3
-            int[] ans = new int[nums.Length - windowSize + 1];
-            if (nums.Length == 0)
+            
+        }
+
+        public class Node
+        {
+            public int value;
+            public Node prev;
+            public Node next;
+            public Node(int value)
             {
-                return nums;
+                this.value = value;
             }
-            Stack<int> maxes = new Stack<int>();
-            int currMax = nums[0];
-            for (int i = 0; i < windowSize - 1; i++)
-            {
-                if (nums[i] > currMax)
-                {
-                    currMax = nums[i];
-                }
-            }
-            maxes.Push(currMax);
-            for (int i = windowSize; i < nums.Length; i++)
-            {
-                if (nums[i] > maxes.Peek())
-                {
-                    maxes.Push(nums[i]);
-                }
-                else
-                {
-                    int max = maxes.Peek();
-                    maxes.Push(max);
-                }
-            }
-            for (int i = ans.Length - 1; i >= 0; i--)
-            {
-                ans[i] = maxes.Pop();
-            }
-            return ans;//return ans
         }
     }
 }
